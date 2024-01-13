@@ -1,6 +1,8 @@
-import { Facebook, Instagram, Twitter } from '@mui/icons-material';
+import { Facebook, Instagram, Phone, Twitter } from '@mui/icons-material';
 import React from 'react'
 import styled from 'styled-components'
+import RoomIcon from '@mui/icons-material/Room';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 const Footer = () => {
     const Container = styled.div`
@@ -55,6 +57,15 @@ const Footer = () => {
     flex:1;
     padding: 20px;`;
 
+    const ContactItem = styled.div`
+      margin-bottom:20px;
+      display:flex;
+      align-items:center;
+    `;
+
+    const Payment = styled.img`
+    `;
+
   return (
     <Container>
         <Left>
@@ -89,7 +100,11 @@ const Footer = () => {
            </List>
         </Center>
         <Right>
-
+         <Title>Contact</Title>
+         <ContactItem> <RoomIcon style={{marginRight:10}}/> Badarpur New Delhi 110044</ContactItem>
+         <ContactItem><Phone style={{marginRight:10}}/> +91 9999990007</ContactItem>
+         <ContactItem><MailOutlineIcon style={{marginRight:10}}/>contact.admin@gmail.com</ContactItem>
+         <Payment src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5KnrnioPgHXHrXvqpjtDmS9-EnR3c84yVtRZPsg9L-wUd28YGRu5EGgG8_EYl8pnhFA&usqp=CAU"/>
         </Right>
     </Container>
   )
